@@ -26,14 +26,15 @@ body{
 	padding: 1rem;
 	width: 60%;
 	margin:  3rem auto;
-  	border-radius: 15px;
+  border-radius: 15px;
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
+  align-items: center;
 }
 
-.App:before{
+.App::before{
 	background-color: rgba(255, 255, 255, 0.3);
 	backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);
 	content: '';
@@ -113,4 +114,21 @@ body{
 
 .icon{
 	object-fit: contain;
+}
+
+@media only screen and (max-width: 600px) {
+  .App{
+    width: 90%;
+  }
+
+  .nav-item label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  #search-btn{
+    margin-top: 1rem;
+  }
 }
